@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets / credentials
+.env
+*.env
+!.env.example
+
+# Acquisition outputs (may contain case data — do not commit)
+captures/
+reports/
+*.tar
+*.manifest.json
+conversation_full_history_*.json
+burner_bundle_*.json
+
+# NANPA export (large; download separately)
+CoCodeAssignment_*.txt
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,41 @@
+{
+  "CSV / NANPA prefix": {
+    "TP": 66,
+    "FP": 138,
+    "TN": 234,
+    "FN": 159,
+    "skipped": 14,
+    "n": 597,
+    "precision": 0.324,
+    "recall": 0.293,
+    "specificity": 0.629,
+    "accuracy": 0.503,
+    "f1": 0.308
+  },
+  "Twilio line-type (tool decision)": {
+    "TP": 225,
+    "FP": 0,
+    "TN": 372,
+    "FN": 0,
+    "skipped": 14,
+    "n": 597,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "accuracy": 1.0,
+    "f1": 1.0
+  },
+  "Naive fusion (CSV OR Twilio)": {
+    "TP": 225,
+    "FP": 138,
+    "TN": 234,
+    "FN": 0,
+    "skipped": 14,
+    "n": 597,
+    "precision": 0.62,
+    "recall": 1.0,
+    "specificity": 0.629,
+    "accuracy": 0.769,
+    "f1": 0.765
+  }
+}

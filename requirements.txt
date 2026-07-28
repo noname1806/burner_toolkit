@@ -1,0 +1,12 @@
+# Device-layer analysis
+sqlcipher3-wheels     # 04-decrypt-hushed  (imported as `sqlcipher3`; the wheels build works on Windows)
+cryptography          # 05-carve-deleted   (raw SQLCipher AES-256-CBC page decryption)
+frida-tools           # 06-extract-prefs, 07-network-capture (provides the `frida` module + CLI)
+
+# Cloud client (08) and number identification (09)
+flask                 # 08 BFCC, 09 BurnerCheck web UIs
+requests              # 08 BFCC
+twilio                # 09 BurnerCheck (Lookup v2 Line Type Intelligence)
+python-dotenv         # 09 BurnerCheck (.env credentials)
+
+# External (NOT pip): adb (Android Platform Tools) and frida-server running on a rooted device.
