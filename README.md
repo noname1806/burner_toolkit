@@ -13,34 +13,6 @@ validated on live data, so each claim in the paper maps to a runnable tool.
 > install-to-acquisition robot. The toolkit does **not** defeat PairIP-class hardening; where a
 > stage is infeasible it names the blocking mechanism rather than inferring an app property.
 
-## Workflow order
-``
-        ┌─────────────┐
-        │ 01 hardening │  static triage: what is feasible on this app?
-        └──────┬──────┘
-   DEVICE ─────┼───────────────────────────────────────────────
-        ┌──────▼──────┐   ┌────────────┐   ┌────────────────┐
-        │ 02 acquire   │──▶│ 03 db-diff │──▶│ 04 decrypt     │
-        │ (hashed)     │   │ before/aft │   │ (Hushed key)   │
-        └──────────────┘   └────────────┘   └───────┬────────┘
-        ┌──────────────┐   ┌────────────┐   ┌────────▼───────┐
-        │ 06 extract   │   │ 05 carve   │◀──│ (decrypted DB) │
-        │ prefs/tokens │   │ deleted    │   └────────────────┘
-        └──────────────┘   └────────────┘
-   NETWORK ────────────────────────────────────────────────────
-        ┌──────────────────────────────┐
-        │ 07 network-capture (below TLS)│
-        └──────────────────────────────┘
-   CLOUD ──────────────────────────────────────────────────────
-        ┌──────────────────────────────┐   ┌────────────────────┐
-        │ 08 cloud-client (BFCC)        │   │ 09 identify        │
-        │ token-scoped, read-only       │   │ (BurnerCheck)      │
-        └──────────────────────────────┘   └────────────────────┘
-   SUPPORT ────────────────────────────────────────────────────
-        10 ui-helper (drive app actions)   11 orchestrator (run automatable stages)
-
-        ``
-
 | # | Folder | Layer | What it does |
 |---|--------|-------|--------------|
 | 01 | `01-hardening-scan` | triage | Static scan of an APK/bundle: PairIP, Play Integrity, App Check, FingerprintJS, TLS pinning, SQLCipher, and backend hosts. Tells you what is feasible. |
