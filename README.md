@@ -7,15 +7,14 @@ paper *"Not All 'Burners' Burn: Device and Cloud Forensics of Android Burner App
 Each numbered folder is one stage of the workflow. Every tool emits a hashed artifact and was
 validated on live data, so each claim in the paper maps to a runnable tool.
 
-> **Scope, honestly.** The **acquisition and analysis** stages are automated and reproducible.
+> **Scope.** The **acquisition and analysis** stages are automated and reproducible.
 > **Installing an app and using it** (registration, messaging, deletion, number burn) is
-> *analyst-driven* through a deterministic UI helper — it is **not** a fully automated
+> *analyst-driven* through a deterministic UI helper  it is **not** a fully automated
 > install-to-acquisition robot. The toolkit does **not** defeat PairIP-class hardening; where a
 > stage is infeasible it names the blocking mechanism rather than inferring an app property.
 
 ## Workflow order
 
-```
         ┌─────────────┐
         │ 01 hardening │  static triage: what is feasible on this app?
         └──────┬──────┘
@@ -39,7 +38,6 @@ validated on live data, so each claim in the paper maps to a runnable tool.
         └──────────────────────────────┘   └────────────────────┘
    SUPPORT ────────────────────────────────────────────────────
         10 ui-helper (drive app actions)   11 orchestrator (run automatable stages)
-```
 
 | # | Folder | Layer | What it does |
 |---|--------|-------|--------------|
