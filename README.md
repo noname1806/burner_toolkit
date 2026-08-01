@@ -14,7 +14,7 @@ validated on live data, so each claim in the paper maps to a runnable tool.
 > stage is infeasible it names the blocking mechanism rather than inferring an app property.
 
 ## Workflow order
-
+``
         ┌─────────────┐
         │ 01 hardening │  static triage: what is feasible on this app?
         └──────┬──────┘
@@ -38,6 +38,8 @@ validated on live data, so each claim in the paper maps to a runnable tool.
         └──────────────────────────────┘   └────────────────────┘
    SUPPORT ────────────────────────────────────────────────────
         10 ui-helper (drive app actions)   11 orchestrator (run automatable stages)
+
+        ``
 
 | # | Folder | Layer | What it does |
 |---|--------|-------|--------------|
